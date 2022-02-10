@@ -8,6 +8,7 @@ import {
   Route
 } from 'react-router-dom'
 import ProudctScreen from "./screens/ProudctScreen";
+import CartScreen from "./screens/CartScreen";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,10 @@ function App() {
         <Routes>
           <Route path='/' element={<Homescreen/>} />
           <Route path="/product/:id" element={<ProudctScreen/>} />
+          <Route path="/cart">
+            <Route path=":id" element={<CartScreen />} />
+            <Route path="" element={<CartScreen/>} />
+          </Route>
         </Routes>
         
       <Footer />
