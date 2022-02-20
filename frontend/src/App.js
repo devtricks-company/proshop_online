@@ -9,12 +9,14 @@ import {
 } from 'react-router-dom'
 import ProudctScreen from "./screens/ProudctScreen";
 import CartScreen from "./screens/CartScreen";
+import LoginScreen from "./screens/LoginScreen";
 function App() {
   return (
     <BrowserRouter>
       <Header />
         <Routes>
           <Route path='/' element={<Homescreen/>} />
+          <Route path='/login' element={<LoginScreen />} />
           <Route path="/product/:id" element={<ProudctScreen/>} />
           <Route path="/cart">
             <Route path=":id" element={<CartScreen />} />

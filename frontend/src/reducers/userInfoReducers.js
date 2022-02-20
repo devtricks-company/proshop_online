@@ -13,7 +13,7 @@ export const userLoginReducer = (state={},action) => {
         case USRE_INFO_SUCCESS:
             return {loading:false,userInfo:action.payload}
         case USER_INFO_FAIL:
-            return {loading:false,userInfo:{},error:action.payload}
+            return {loading:false,error:action.payload}
        case USER_INFO_LOGOUT:
            return {}
         default:
